@@ -1,17 +1,13 @@
 .cardSection, .highlightSection, .iconSection, nav, .businessCardSection, .carouselSection, .footerSection, .region{
-  padding-top: 48px;
+  padding: 48px 5% 0px;
   max-width: calc(1600px + 10%);
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 nav, .carouselSection, .footerSection {
   padding-top: 0px;
 }
 
-.cardSection img, .cardText, .businessCardSection img {
+.cardSection img, .businessCardSection img {
   height: auto;
   width: 100%;
 }
@@ -34,7 +30,7 @@ nav, .carouselSection, .footerSection {
   margin-bottom: 0px;
 }
 
-.cardLinkCover, .iconBlock, nav > div, nav, .l-navbar, .l-navbar > div {
+.cardLinkCover, .iconBlock, .l-block, .r-navbar, nav, .l-navbar, .l-navbar > div {
   display: flex;
 }
 
@@ -68,8 +64,8 @@ nav, .carouselSection, .footerSection {
 }
 
 .cardText > span {
-  font-weight: 340;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 13px;
   display:flow-root;
   padding: 2px 12px 0px 0px;
 }
@@ -80,7 +76,7 @@ nav, .carouselSection, .footerSection {
   font-size: 14px;
   font-weight: 500;
 }
-.hlContainer, .hl-button span, nav, .l-navbar-menu{
+.hlContainer, nav, .l-navbar-menu{
   position: relative;
 }
 
@@ -105,20 +101,18 @@ nav, .carouselSection, .footerSection {
 }
 
 .hl-heading {
-  margin: 0px;
-  font-size: 35px;
+  font-size: 31px;
   font-weight: 600;
   padding-bottom: 3px;
 }
 
 .hl-text {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .hl-text span {
   display: flow-root;
-  font-size: 15px;
-  font-weight: 400px;
+  font-size: 14px;
   line-height: 20px;
 }
 
@@ -131,7 +125,6 @@ nav, .carouselSection, .footerSection {
   background-color: black;
   width: max-content;
   padding: 8px 20px;
-  border: 2px solid black;
 }
 
 .hl-button span, .shopnow {
@@ -302,7 +295,8 @@ nav {
   width: 80%;
 }
 
-.siteMap {
+.dropdown-list {
+  border: 1px solid #ededed;
   border-bottom: 2px solid black;
 }
 
@@ -324,25 +318,22 @@ nav {
 
 .listicon-dropdown > input[type=checkbox]:checked ~ .listicon-dropdown-list {
   visibility: visible;
+  border-bottom: 2px solid black;
 }
 
 .l-navbar-menu > input[type=checkbox]:checked ~ .dropdown-list {
   visibility: visible;
-  right: -26px;
+  right: -15px;
   top: 54px;
 }
 
 .l-navbar-menu > input[type=checkbox]:checked ~ label, .r-navbar-menu > input[type=checkbox]:checked ~ label {
+  border: 1px solid #ededed;
   background-color: #f2f2f2;
 }
 
 .listicon-dropdown > div > .dropdown-item {
   border-bottom: 1px solid rgba(0,0,0,0.1)
-}
-
-.dropdown-button {
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .dropdown-item:hover{
@@ -390,7 +381,6 @@ nav {
 
 @media screen and (max-width:1399px) {
   .hl-heading {
-    font-size: 22px;
     line-height: 28px;
     max-height: 56px;
     font-weight: 400;
@@ -431,18 +421,12 @@ nav {
   }
 
   .highlightSection{
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 0px;
+    padding: 0px;
     margin-top: 48px;
   }
 
   .textBlock {
     max-width: 340px;
-  }
-
-  .hl-img-cover {
-    overflow: hidden;
   }
 
   .img1 {
@@ -568,6 +552,7 @@ nav {
   }
 
   .hl-heading {
+    margin: auto;
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
