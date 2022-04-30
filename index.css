@@ -1,6 +1,7 @@
 .cardSection, .highlightSection, .iconSection, nav, .businessCardSection, .carouselSection, .footerSection, .region{
   padding: 48px 5% 0px;
   max-width: calc(1600px + 10%);
+  margin: 0 auto;
 }
 
 nav, .carouselSection, .footerSection {
