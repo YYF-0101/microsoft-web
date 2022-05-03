@@ -258,10 +258,6 @@ a:hover {
   padding:0 6px 0px 8px;
 }
 
-.l-navbar {
-  flex-grow: 1;
-}
-
 nav {
   margin-bottom: 3px;
 }
@@ -278,7 +274,7 @@ nav {
   margin-top: 7px;
 }
 
-.l-block {
+.l-block, .flex-grow, .l-navbar {
   flex-grow: 1;
 }
 
@@ -301,7 +297,7 @@ nav {
   border-bottom: 2px solid black;
 }
 
-.listicon-dropdown > .listicon-dropdown-list {
+.listicon-dropdown > .listicon-dropdown-list, .search-container, .cancelcheck:checked + .search-container {
   visibility: collapse;
 }
 
@@ -311,7 +307,7 @@ nav {
   visibility: collapse;
 }
 
-.r-navbar-menu > input[type=checkbox]:checked ~ .dropdown-list {
+.navcheck:checked ~ .dropdown-list {
   top: 54px;
   right: 80px;
   visibility: visible;
@@ -328,7 +324,7 @@ nav {
   top: 54px;
 }
 
-.l-navbar-menu > input[type=checkbox]:checked ~ label, .r-navbar-menu > input[type=checkbox]:checked ~ label {
+.l-navbar-menu > input[type=checkbox]:checked ~ label, .navcheck:checked ~ .navlabel {
   border: 1px solid #ededed;
   background-color: #f2f2f2;
 }
@@ -369,7 +365,58 @@ nav {
   font-size: 24px;
 }
 
+.search-container {
+  width: 1444px;
+  position: absolute;
+  right: -7%;
+  top: 8px;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.search-container > div {
+  display: flex;
+  margin-left: auto;
+  position: relative;
+  background-color: #fff;
+}
+
+.search-container input {
+  width: 99%;
+  height: 40px;
+  border: 4px solid #4c4c4c;
+}
+
+.inputsearch-icon {
+  font-size: 19px;
+  position: absolute;
+  top: 16%;
+  right: 106px;
+}
+
+.Cancelbutton {
+  padding: 7px;
+  background-color: white;
+}
+
+.searchcheck:checked ~ .search-container {
+  visibility: visible;
+}
+
+.left-arrow {
+  display: none;
+  font-size: 27px;
+  padding-right: 10px;
+}
+
 /* media query */
+@media screen and (max-width:1800px) {
+  .search-container {
+    width: 81%;
+  }
+}
+
 @media screen and (min-width:1082px) and (max-width:1497px) {
   .cardLinkCover{
     display: block;
@@ -377,6 +424,11 @@ nav {
 
   .cardLink {
     display: flow-root;
+  }
+
+  .search-container {
+    right: -10%;
+    width: 79%;
   }
 }
 
@@ -400,7 +452,11 @@ nav {
   ul{
     overflow-x: auto;
   }
-  
+
+  .search-container {
+    width: 78%;
+    right: -13%;
+  }
 }
 
 @media screen and (max-width:1082px) {
@@ -436,6 +492,11 @@ nav {
 
   .img2 {
     display: block;
+  }
+
+  .search-container {
+    right: -13%;
+    width: 85%;
   }
 }
 
@@ -475,11 +536,11 @@ nav {
     flex-flow: row-reverse;
   }
 
-  .l-toggler, .listicon-dropdown {
+  .l-toggler, .listicon-dropdown, .left-arrow {
     display: block;
   }
 
-  .l-navbar-menu, .navbar-dropdown {
+  .l-navbar-menu, .navbar-dropdown, .Cancelbutton, .searchcheck:checked ~ .listicon-dropdown  {
     display: none !important;
   }
 
@@ -500,6 +561,19 @@ nav {
   .navbartxt-hide{
     padding: 13px 0px 11px 6px;
     margin-right: -6px;
+  }
+
+  .search-container {
+    right: -1%;
+    width: 98%;
+  }
+
+  .inputsearch-icon {
+    left: 50px;
+  }
+
+  .input-txt {
+    padding-left: 40px;
   }
 }
 

@@ -43,8 +43,8 @@
         </form>
       </div>
       <div class="r-navbar-menu">
-        <input type="checkbox" id="nav-toggle"/>
-        <label for="nav-toggle">
+        <input type="checkbox" id="nav-toggle" class="navcheck"/>
+        <label for="nav-toggle" class="navlabel">
         <div class="navbar-dropdown" tabIndex=-1>
           <div class="dropdown-button">
             <span>ALL Microsoft</span>
@@ -115,13 +115,16 @@
             <i class="bi bi-chevron-right"></i>
           </div>
         </div>
-      </div> 
-        <div class="navbartxt-hide">
-          <span>
-            Search
-          </span>
-          <i class="bi bi-search search"></i>
-        </div>
+        </div> 
+        <input type="checkbox" id="search-toggle" class="searchcheck"/>
+        <label for="search-toggle">
+          <div class="navbartxt-hide">
+            <span>
+              Search
+            </span>
+            <i class="bi bi-search search"></i>
+          </div>
+        </label>
         <div class="listicon-dropdown" tabIndex=-1>
           <input type="checkbox" id="listIconbutton-toggle"/>
           <label for="listIconbutton-toggle">
@@ -146,6 +149,23 @@
             <div class="dropdown-item">View Sitemap</div>
           </div>
         </div>
+        <div class="search-container">
+          <div>
+            <div class="left-arrow">
+              <i class="bi bi-arrow-left"></i>
+            </div>
+            <div class="flex-grow">
+              <div class="inputsearch-icon">
+                <i class="bi bi-search search"></i>
+              </div>
+              <input type="text" class="input-txt" placeholder="Search Microsoft.com">
+            </div>
+            <div>
+              <input type="checkbox" id="cancel-toggle" class="cancelcheck">
+              <label for=" cancel-toggle" class="Cancelbutton" type="Cancel">Cancel</label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     </div>
@@ -159,7 +179,7 @@
           Sign in
         </span>
       </div>
-      <div style="padding: 7px 7px 0px 0px;">
+      <div style="padding: 7px 18px 0px 0px;">
         <i class="bi bi-person-circle signin"></i> 
       </div>
     </div>
